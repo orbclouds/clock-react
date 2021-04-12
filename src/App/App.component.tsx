@@ -1,6 +1,8 @@
 import React from 'react';
 import type { FC } from 'react';
 
+import Orb from '@app/Orb';
+
 import Hands from './Hands';
 import Numbers from './Numbers';
 import OuterRim from './OuterRim';
@@ -11,12 +13,15 @@ const App: FC = () => {
   const { time } = useHooks();
 
   return (
-    <main>
-      <OuterRim>
-        <Numbers />
-        <Hands time={time} />
-      </OuterRim>
-    </main>
+    <>
+      <Orb />
+      <main>
+        <OuterRim>
+          <Numbers />
+          <Hands time={time} />
+        </OuterRim>
+      </main>
+    </>
   );
 };
 
